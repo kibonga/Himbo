@@ -1,0 +1,15 @@
+﻿
+Important thing about JwtManager!
+
+Login and Register are two separate things
+
+1. Register is defined in Application layer and implemented in Implementation layer
+eg. EfRegisterUserCommand: IRegisterUserCommand
+- After successfull registration nothing is being returned (void) and User has to Login afterwards
+- This is done in order to separate Login/Register functionalities because Login is dependant on Jwt logic and Register is not
+
+3. Login is defined in Api layer, 
+- This is done in order to separate Login/Register functionalities because Login is dependant on Jwt logic and Register is not
+- Login (defined in Api layer) uses Jwt logic, and that is only relevant to Api
+- We deliberately don't want Jwt to be inside Application/Implementation layer
+- One could argue that the Login could be defined in Implementation layer

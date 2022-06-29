@@ -1,0 +1,12 @@
+C:\Users\Kibonga\Desktop\Asp\Himbo\Himbo.Domain\bin\Debug\net5.0\Himbo.Domain.deps.json
+C:\Users\Kibonga\Desktop\Asp\Himbo\Himbo.Domain\bin\Debug\net5.0\Himbo.Domain.dll
+C:\Users\Kibonga\Desktop\Asp\Himbo\Himbo.Domain\bin\Debug\net5.0\Himbo.Domain.pdb
+C:\Users\Kibonga\Desktop\Asp\Himbo\Himbo.Domain\obj\Debug\net5.0\Himbo.Domain.csproj.AssemblyReference.cache
+C:\Users\Kibonga\Desktop\Asp\Himbo\Himbo.Domain\obj\Debug\net5.0\Himbo.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kibonga\Desktop\Asp\Himbo\Himbo.Domain\obj\Debug\net5.0\Himbo.Domain.AssemblyInfoInputs.cache
+C:\Users\Kibonga\Desktop\Asp\Himbo\Himbo.Domain\obj\Debug\net5.0\Himbo.Domain.AssemblyInfo.cs
+C:\Users\Kibonga\Desktop\Asp\Himbo\Himbo.Domain\obj\Debug\net5.0\Himbo.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Kibonga\Desktop\Asp\Himbo\Himbo.Domain\obj\Debug\net5.0\Himbo.Domain.dll
+C:\Users\Kibonga\Desktop\Asp\Himbo\Himbo.Domain\obj\Debug\net5.0\refint\Himbo.Domain.dll
+C:\Users\Kibonga\Desktop\Asp\Himbo\Himbo.Domain\obj\Debug\net5.0\Himbo.Domain.pdb
+C:\Users\Kibonga\Desktop\Asp\Himbo\Himbo.Domain\obj\Debug\net5.0\ref\Himbo.Domain.dll

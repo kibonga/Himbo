@@ -1,0 +1,5 @@
+﻿
+Logging vs Logger
+
+Logging logs exceptions, is related to Exceptions
+Logger logs activities, is related to UseCases

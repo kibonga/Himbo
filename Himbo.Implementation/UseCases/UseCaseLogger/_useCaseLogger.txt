@@ -1,0 +1,6 @@
+﻿
+UseCaseLogger stores all logger implemetations
+We have previously defined Logging abstraction in application layer : IUseCaseLogger which has one method called Log()
+
+Types of logger implementations
+1. ConsoleUseCaseLogger

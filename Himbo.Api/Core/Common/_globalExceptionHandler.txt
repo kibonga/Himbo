@@ -1,0 +1,7 @@
+﻿
+
+GlobalExceptionHandler is a Global Middleware
+It takes 2 arguments
+1. Request Delegate - which is simply a next() function 
+(Docs says it's a function that can process HTTP request)
+2. IExceptionLogger - abstraction defined in Application layer, in order to Log any Exception

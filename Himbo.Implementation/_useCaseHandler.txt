@@ -1,0 +1,15 @@
+﻿
+UseCaseHandler's jobs:
+1. handle Authorization
+2. handle Logging
+3. handle Commands/Queries
+
+What is needed for Use Case Handler?
+1. IApplicationUser - in order to Authorize users
+2. IUseCaseLogger - in order to Log Use Case Activities
+3. IExceptionLogger - in order to throw Exceptions if any errors occur
+
+
+HandleLoggingAndAuthorization<TRequest>(IUseCase useCase, TRequest, data)
+Authorization part checks if users UsesCases Contain Id of the passed useCase
+Logging part creates new UseCaseLog and calls Log()

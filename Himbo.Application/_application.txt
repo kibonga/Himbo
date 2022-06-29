@@ -1,0 +1,17 @@
+﻿
+This layer contains abstractions, which will be defined in implementation layer
+I chose this structure in order to gain familiarity with Project organization because of the Final Exam
+
+Here are defined:
+1. UseCases
+2. Logging
+3. Exceptions
+4. Mailers
+
+Important note!
+Compared to other design pattern eg. Repository, Mediator etc...
+We will not include any concrete logic in here
+This layer will not be dependent on any library/technology/implementatio
+Some people will try to add Jwt logic in here, but that is a bad practice, because we will limit our application to that specific implementation
+
+

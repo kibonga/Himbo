@@ -1,0 +1,6 @@
+﻿
+Types of exceptions
+1. NotFound
+2. Forbidden
+3. UseCaseConflict
+4. Validation - wanted to create my own, but it already exists in FluentValidation (see GlobalExceptionHandler in Implementation layer)

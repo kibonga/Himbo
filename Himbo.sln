@@ -1,0 +1,97 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32519.379
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{03AA15CC-B34F-4ECB-A382-63D14316DF3F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{6DCFC007-E915-44EC-833A-A3E2D55B06E3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "core", "core", "{45E00F05-EA0D-4F8A-9B8F-59D85CC6ECC9}"
+	ProjectSection(SolutionItems) = preProject
+		_core.txt = _core.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "api", "api", "{CE385701-B436-47CC-9B04-2A59EDDBE6BD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "infrastructure", "infrastructure", "{26BB514B-C1D6-4A45-8419-BF00BF1C0D1B}"
+	ProjectSection(SolutionItems) = preProject
+		_infrastructure.txt = _infrastructure.txt
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Himbo.Domain", "Himbo.Domain\Himbo.Domain.csproj", "{D4D276CE-AC8B-425E-9DEE-33E516598FB0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Himbo.Application", "Himbo.Application\Himbo.Application.csproj", "{AC8FD844-43F5-4A07-AE8A-B2A0A6C3F255}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D4D276CE-AC8B-425E-9DEE-33E516598FB0} = {D4D276CE-AC8B-425E-9DEE-33E516598FB0}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Himbo.DataAccess", "Himbo.DataAccess\Himbo.DataAccess.csproj", "{F3657766-AC5C-4401-8621-95AD79F14650}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D4D276CE-AC8B-425E-9DEE-33E516598FB0} = {D4D276CE-AC8B-425E-9DEE-33E516598FB0}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Himbo.Implementation", "Himbo.Implementation\Himbo.Implementation.csproj", "{90432D36-B781-41C4-B212-97A313DFBBB2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AC8FD844-43F5-4A07-AE8A-B2A0A6C3F255} = {AC8FD844-43F5-4A07-AE8A-B2A0A6C3F255}
+		{D4D276CE-AC8B-425E-9DEE-33E516598FB0} = {D4D276CE-AC8B-425E-9DEE-33E516598FB0}
+		{F3657766-AC5C-4401-8621-95AD79F14650} = {F3657766-AC5C-4401-8621-95AD79F14650}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Himbo.Api", "Himbo.Api\Himbo.Api.csproj", "{13EEDBCC-79E4-4AAB-BF2F-C0DEB8A9825C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{90432D36-B781-41C4-B212-97A313DFBBB2} = {90432D36-B781-41C4-B212-97A313DFBBB2}
+		{AC8FD844-43F5-4A07-AE8A-B2A0A6C3F255} = {AC8FD844-43F5-4A07-AE8A-B2A0A6C3F255}
+		{D4D276CE-AC8B-425E-9DEE-33E516598FB0} = {D4D276CE-AC8B-425E-9DEE-33E516598FB0}
+		{F3657766-AC5C-4401-8621-95AD79F14650} = {F3657766-AC5C-4401-8621-95AD79F14650}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "about", "about", "{2F0CB25F-9ADD-42F3-8A19-36E5A43125D1}"
+	ProjectSection(SolutionItems) = preProject
+		HimboReadMe.txt = HimboReadMe.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D4D276CE-AC8B-425E-9DEE-33E516598FB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4D276CE-AC8B-425E-9DEE-33E516598FB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4D276CE-AC8B-425E-9DEE-33E516598FB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4D276CE-AC8B-425E-9DEE-33E516598FB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC8FD844-43F5-4A07-AE8A-B2A0A6C3F255}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC8FD844-43F5-4A07-AE8A-B2A0A6C3F255}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC8FD844-43F5-4A07-AE8A-B2A0A6C3F255}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC8FD844-43F5-4A07-AE8A-B2A0A6C3F255}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3657766-AC5C-4401-8621-95AD79F14650}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3657766-AC5C-4401-8621-95AD79F14650}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3657766-AC5C-4401-8621-95AD79F14650}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3657766-AC5C-4401-8621-95AD79F14650}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90432D36-B781-41C4-B212-97A313DFBBB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90432D36-B781-41C4-B212-97A313DFBBB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90432D36-B781-41C4-B212-97A313DFBBB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90432D36-B781-41C4-B212-97A313DFBBB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13EEDBCC-79E4-4AAB-BF2F-C0DEB8A9825C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13EEDBCC-79E4-4AAB-BF2F-C0DEB8A9825C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13EEDBCC-79E4-4AAB-BF2F-C0DEB8A9825C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13EEDBCC-79E4-4AAB-BF2F-C0DEB8A9825C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{45E00F05-EA0D-4F8A-9B8F-59D85CC6ECC9} = {03AA15CC-B34F-4ECB-A382-63D14316DF3F}
+		{CE385701-B436-47CC-9B04-2A59EDDBE6BD} = {03AA15CC-B34F-4ECB-A382-63D14316DF3F}
+		{26BB514B-C1D6-4A45-8419-BF00BF1C0D1B} = {03AA15CC-B34F-4ECB-A382-63D14316DF3F}
+		{D4D276CE-AC8B-425E-9DEE-33E516598FB0} = {45E00F05-EA0D-4F8A-9B8F-59D85CC6ECC9}
+		{AC8FD844-43F5-4A07-AE8A-B2A0A6C3F255} = {45E00F05-EA0D-4F8A-9B8F-59D85CC6ECC9}
+		{F3657766-AC5C-4401-8621-95AD79F14650} = {26BB514B-C1D6-4A45-8419-BF00BF1C0D1B}
+		{90432D36-B781-41C4-B212-97A313DFBBB2} = {26BB514B-C1D6-4A45-8419-BF00BF1C0D1B}
+		{13EEDBCC-79E4-4AAB-BF2F-C0DEB8A9825C} = {CE385701-B436-47CC-9B04-2A59EDDBE6BD}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {922F71E1-716E-456D-BA56-AFECEADACE7E}
+	EndGlobalSection
+EndGlobal

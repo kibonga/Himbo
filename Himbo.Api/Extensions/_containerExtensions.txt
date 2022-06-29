@@ -1,0 +1,24 @@
+﻿
+- Container Extensions is a static class used for separating Services
+- We could have used similar option by defining  static {ProjectName}ServicesRegistration class with static IServiceCollection method
+eg. 
+public static class {ProjectName}ServicesRegistration
+{
+    public static IServiceCollection Configure{ProjectName}Services(this IServiceCollection services, IConfiguration configuration)
+    {
+        services.AddDbContext<DbContext>(options =>
+            options.UseSqlServer(
+                configuration.GetConnectionString("LeaveManagementConnectionString")));
+
+        return services;
+    }
+}
+- But for the code familiarity sake and Exam, we will use first option 
+- Jwt is specific to Api, that is why its not defined on lower level
+
+
+What is defined in Container extensions
+1. AddUseCases - Register all use cases used inside application
+2. AddHimboDbContext - Register DbContext which will be used through application
+3. AddJwt - Registers JwtManager and adds additional (jwt) options to Authentication service
+4. AddApplicationUser - Register User (IApplicationUser), if User is signed in use JwtUser if he is not use AnonymousUser

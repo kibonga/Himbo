@@ -1,0 +1,26 @@
+﻿
+Use cases defined on application layer are just Interfaces(contracts) that will be defined in Implementation layer
+We will follow CQRS architecture
+
+Types of UseCase Interfaces
+1. IUseCaase 
+- base abstraction for Commands and Queries
+- defines default info about particular use case (id, name, desscription)
+
+2. ICommand
+- use case that is used for changing the state of the database (read, update, delete)
+- has a void method Execute(TRequest request)
+- TRequest represents in most cases DTO passed as an argument FromBody/FromQuery upon which we need to do some Action/Command
+- Dto will be passed as an argument to the Execute() function
+
+3. IQuery
+- Query is used to retrieve/read something from database (read)
+- similiarly to command, it has TRequest, but additionally has TResult
+- first argument is the Dto being passed
+- second argument is the return type
+
+4. IUseCaseLogger
+- is used for logging purposes
+- it has a Log() which takes as an argument UseCaseLog (contains all relevant data)
+
+
