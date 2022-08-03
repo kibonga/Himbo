@@ -18,7 +18,6 @@
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
-      <p>Himbo is a API project created using ASP.NET Core 5,Entity Framework, Microsoft SQL Server.<p/>
       <ul>
         <li><a href="#built-with">Built With</a></li>
       </ul>
@@ -43,6 +42,8 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+<p>Himbo is a API project created using ASP.NET Core 5,Entity Framework, Microsoft SQL Server.<p/>
+<p>It implements SOLID principles, Onion Architecture and revolves arount CQRS pattern.</p>
 
 ### Built With
 
