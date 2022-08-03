@@ -45,7 +45,7 @@
 
 ### Built With
 
-* [![Asp .NET Core][Asp .NET Core]][ASP-url]
+* ![.Net](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white)
 * [![React][React.js]][React-url]
 * [![Vue][Vue.js]][Vue-url]
 * [![Angular][Angular.io]][Angular-url]
