@@ -146,7 +146,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Pavle Djurdjic - <a href="https://www.linkedin.com/in/pavledjurdjic/" alt="pavledjurdjic_linkedIn">LinkedIn</a> - email@email_client.com
 
 Project Link: [https://github.com/kibonga/Himbo](https://github.com/kibonga/Himbo)
 
