@@ -1,14 +1,10 @@
-
-<div id="top"></div>
-
 <!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <a href="https://github.com/kibonga/Himbo">
-    Himbo
-  </a>
-
-<h3 >Himbo</h3>
+<div>
+  <h1>
+    <a href="https://github.com/kibonga/Himbo">
+      Himbo
+    </a>
+  </h1>
 
   <p align="center">
     project_description
