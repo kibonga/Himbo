@@ -6,7 +6,7 @@
     </a>
   </h1>
 
-  <p align="center">
+  <p>
     Himbo is a Blog CMS created using ASP.NET Core, Entity Framework, Microsoft SQL Server, while implementig SOLID principles as well as Onion Architecture and CQRS   pattern.
     <br />
     <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
