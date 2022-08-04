@@ -51,7 +51,10 @@
 <p>Further more You will need to add stored procedure to your Database in order for logging to work.</p>
 
 <h4><a href="https://github.com/kibonga/Himbo/blob/108cc86502c4289df11ab585d833beffe4aa9add/script.sql" target="_blank" alt="link_stored_procedure">Logging Sql Script - Stored procedure</a></h4>
+
 <h4><a href="https://github.com/kibonga/Himbo/blob/108cc86502c4289df11ab585d833beffe4aa9add/LoginCredentials.txt" target="_blank" alt="link_credentials">Login credentials</a></h4>
+
+<h4><a href="https://github.com/kibonga/Himbo/blob/21863e0602319e77637e3525867b70d382818fcb/himbo_postman_endpoints_collection" target="_blank" alt="link_postman_endpoints">Postman Endpoints Collection</a></h4>
 
 
 <!-- CONTACT -->
