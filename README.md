@@ -44,7 +44,7 @@
 <p>UseCases can additionally be modified for particular User.</p>
 <p>Every usecase attempt is logged in Database using stored procedures.</p>
 
-<h4><a href="https://downgit.github.io/#/home?url=https://github.com/kibonga/Himbo/blob/master/UseCases.xlsx" alt="download_usecases">View UseCases<a/></h4>
+<h4><a href="https://github.com/kibonga/Himbo/blob/master/UseCases.xlsx" alt="download_usecases">View UseCases<a/></h4>
 
 
 <!-- CONTACT -->
