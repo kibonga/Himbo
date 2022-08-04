@@ -48,8 +48,10 @@
   
 ## Usage
 <p>In order to use all functionalities You can download files below.</p>
+<p>Further more You will need to add stored procedure to your Database in order for logging to work.</p>
 
-<h4><a href="https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/kibonga/Himbo/blob/master/LoginCredentials.txt" alt="download_credentials">Login credentials</a></h4>
+<h4><a href="https://github.com/kibonga/Himbo/blob/108cc86502c4289df11ab585d833beffe4aa9add/script.sql" target="_blank" alt="link_stored_procedure">Logging Sql Script - Stored procedure</a></h4>
+<h4><a href="https://github.com/kibonga/Himbo/blob/108cc86502c4289df11ab585d833beffe4aa9add/LoginCredentials.txt" target="_blank" alt="link_credentials">Login credentials</a></h4>
 
 
 <!-- CONTACT -->
