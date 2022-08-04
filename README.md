@@ -48,7 +48,7 @@
 <h4><a href="https://downgit.github.io/#/home?url=https://github.com/kibonga/Himbo/blob/master/UseCases.xlsx" alt="download_usecases">Download UseCases<a/></h4>
   
 ## Usage
-<p>In order to use all functionalities You can download files below.</p>
+<p>In order to use all functionalities You can view files below.</p>
 <p>Further more You will need to add stored procedure to your Database in order for logging to work.</p>
 
 <h4><a href="https://github.com/kibonga/Himbo/blob/108cc86502c4289df11ab585d833beffe4aa9add/script.sql" target="_blank" alt="link_stored_procedure">Logging Sql Script - Stored procedure</a></h4>
