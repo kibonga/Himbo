@@ -1,0 +1,1814 @@
+{
+	"info": {
+		"_postman_id": "4425f89d-5812-4cd9-a587-4315d30c30f3",
+		"name": "AspProject",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16828597"
+	},
+	"item": [
+		{
+			"name": "Himbo",
+			"item": [
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "Register User",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Email\": \"kibonga@gmail.com\",\r\n    \"Password\": \"!Kibonga01\",\r\n    \"FirstName\": \"Lazar\",\r\n    \"LastName\": \"Zivadinovic\"\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"register"
+									]
+								},
+								"description": "Register User"
+							},
+							"response": []
+						},
+						{
+							"name": "Login User",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"lazar@gmail.com\",\r\n    \"password\": \"!Kibonga01\"\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/token",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"token"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Tag",
+					"item": [
+						{
+							"name": "Create New Tag",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJlN2UzNmIyYS1kOWUwLTQzY2MtOTNlYy01M2YwZjkzNTc4YjQiLCJpc3MiOiJLaWJvbmdhSGltYm8iLCJpYXQiOjE2NTQ5ODA0NjgsIlVzZXJJZCI6IjIiLCJBbGxvd2VkVXNlQ2FzZXMiOiJbMSw1LDYsMTMsMTQsMTYsMTcsMTgsMjEsMjIsMjMsMjQsMjUsMjgsMjksMzAsMzEsMzIsMzMsMzRdIiwiRm9yYmlkZGVuVXNlQ2FzZXMiOiJbMl0iLCJBZGRpdGlvbmFsVXNlQ2FzZXMiOiJbMl0iLCJFbWFpbCI6ImtpYm9uZ2FAZ21haWwuY29tIiwibmJmIjoxNjU0OTgwNDY4LCJleHAiOjE2NTQ5ODc2NjgsImF1ZCI6IkFueSJ9.MeOXb6dmfBatIFpYnnynPp43WgaMH-oZHR598s2pIrE",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Sports\",\r\n    \"metaTitle\": \"Meta sports\",\r\n    \"metaDescription\": \"Description about sports\",\r\n    \"slug\": \"sports-slug\"\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/tags",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"tags"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Tag",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 6,\r\n    \"title\": \"Musics\",\r\n    \"metaTitle\": \"Meta music title 2222\",\r\n    \"metaDescription\": \"Description about music\",\r\n    \"slug\": \"music-tag\"\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/tags",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"tags"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Tag",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/tags/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"tags",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Tags",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIyNDE1NTcxZS0zNzJlLTQyYmEtODU4Ni05OTEyNzhkMzJmZWMiLCJpc3MiOiJLaWJvbmdhSGltYm8iLCJpYXQiOjE2NTQyMDE1MjMsIlVzZXJJZCI6IjEiLCJVc2VDYXNlcyI6IltdIiwiRW1haWwiOiJraWJvbmdhQGtpbXVyLmNvbSIsIm5iZiI6MTY1NDIwMTUyMywiZXhwIjoxNjU0MjA4NzIzLCJhdWQiOiJBbnkifQ.M2YPRjPG47IBmsFhzZjlegCCGFwrtThF6UnifJzkpJ0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/tags",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"tags"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find Tag",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/tags/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"tags",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Deactivate Tag",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/tags/deactivate/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"tags",
+										"deactivate",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Activate Tag",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/tags/activate/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"tags",
+										"activate",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Category",
+					"item": [
+						{
+							"name": "Create New Category",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "Title",
+											"value": "Eurocup",
+											"type": "text"
+										},
+										{
+											"key": "metaTitle",
+											"value": "Meta Eurocup",
+											"type": "text"
+										},
+										{
+											"key": "metaDescription",
+											"value": "Description about Eurocup",
+											"type": "text"
+										},
+										{
+											"key": "slug",
+											"value": "eurocup-category",
+											"type": "text"
+										},
+										{
+											"key": "parentId",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/C:/Users/Kibonga/Desktop/Misc/Images/iq-score.jpg"
+										},
+										{
+											"key": "files",
+											"type": "file",
+											"src": [
+												"/C:/Users/Kibonga/Desktop/Misc/Images/How to Finnish.jpeg",
+												"/C:/Users/Kibonga/Desktop/Misc/Images/Kolega.jpg",
+												"/C:/Users/Kibonga/Desktop/Misc/Images/Siziphus.jpg"
+											],
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/categories",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"categories"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Category",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "Title",
+											"value": "VTB league",
+											"type": "text"
+										},
+										{
+											"key": "metaTitle",
+											"value": "Meta VTB league",
+											"type": "text"
+										},
+										{
+											"key": "metaDescription",
+											"value": "Description about VTB league",
+											"type": "text"
+										},
+										{
+											"key": "slug",
+											"value": "vtb-league",
+											"type": "text"
+										},
+										{
+											"key": "parentId",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "Id",
+											"value": "11",
+											"type": "text"
+										},
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/C:/Users/Kibonga/Desktop/Misc/Images/Siziphus.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/categories",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"categories"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Deactivate Category",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/categories/deactivate/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"categories",
+										"deactivate",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Activate Category",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/categories/activate/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"categories",
+										"activate",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Categories",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/categories?keyword=league&perPage=2&page=1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"categories"
+									],
+									"query": [
+										{
+											"key": "keyword",
+											"value": "league"
+										},
+										{
+											"key": "perPage",
+											"value": "2"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find Category",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/categories/10",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"categories",
+										"10"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Category",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:5000/api/categories/6",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"categories",
+										"6"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Post",
+					"item": [
+						{
+							"name": "Create Post",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIxZDkzNzBkYi05Y2I5LTRlNzMtYTBjMC02NjNmMmQwNGY4YjMiLCJpc3MiOiJLaWJvbmdhSGltYm8iLCJpYXQiOjE2NTQ5NzAwMTAsIlVzZXJJZCI6IjIiLCJBbGxvd2VkVXNlQ2FzZXMiOiJbMSw1LDYsMTMsMTQsMTYsMTcsMTgsMjEsMjIsMjMsMjQsMjUsMjgsMjksMzAsMzEsMzIsMzMsMzRdIiwiRm9yYmlkZGVuVXNlQ2FzZXMiOiJbXSIsIkFkZGl0aW9uYWxVc2VDYXNlcyI6IltdIiwiRW1haWwiOiJraWJvbmdhQGdtYWlsLmNvbSIsIm5iZiI6MTY1NDk3MDAxMCwiZXhwIjoxNjU0OTc3MjEwLCJhdWQiOiJBbnkifQ.6KrT6SAWM6p98Ba0TgY17aA_ACFnIUju6SjDJ5ezN2o",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "authorId",
+											"value": "1",
+											"contentType": "application/json",
+											"type": "text"
+										},
+										{
+											"key": "categoryId",
+											"value": "8",
+											"contentType": "application/json",
+											"type": "text"
+										},
+										{
+											"key": "tags",
+											"value": "",
+											"contentType": "application/json",
+											"type": "text"
+										},
+										{
+											"key": "summary",
+											"value": "Real Madrid falls short",
+											"contentType": "application/json",
+											"type": "text"
+										},
+										{
+											"key": "content",
+											"value": "Real Madrid falls short in the Euroleague Finals against Anadolu Efes.",
+											"contentType": "application/json",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "Real Madrid falls short",
+											"contentType": "application/json",
+											"type": "text"
+										},
+										{
+											"key": "metaTitle",
+											"value": "Real Madrid falls short",
+											"contentType": "application/json",
+											"type": "text"
+										},
+										{
+											"key": "metaDescription",
+											"value": "Real Madrid falls short",
+											"contentType": "application/json",
+											"type": "text"
+										},
+										{
+											"key": "slug",
+											"value": "euroleague",
+											"contentType": "application/json",
+											"type": "text"
+										},
+										{
+											"key": "file",
+											"type": "file",
+											"src": []
+										},
+										{
+											"key": "files",
+											"type": "file",
+											"src": "/C:/Users/Kibonga/Desktop/Misc/Images/triangle-ufc-majica.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/posts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"posts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Post",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIyNDNhNTc2Ny0xMmFhLTQyYzEtOWQ4ZS0yYjI1YjZjMjVmNjUiLCJpc3MiOiJLaWJvbmdhSGltYm8iLCJpYXQiOjE2NTUwMzczNjAsIlVzZXJJZCI6IjEiLCJBbGxvd2VkVXNlQ2FzZXMiOiJbMSwyLDMsNCw1LDYsNyw4LDksMTAsMTEsMTIsMTMsMTQsMTUsMTYsMTcsMTgsMTksMjAsMjEsMjIsMjMsMjQsMjUsMjYsMjcsMjgsMjksMzAsMzEsMzIsMzMsMzQsMzUsMzYsMzcsMzgsMzksNDAsNDEsNDIsNDMsNDQsNDUsNDYsNDcsNDgsNDksNTAsNTEsNTJdIiwiRm9yYmlkZGVuVXNlQ2FzZXMiOiJbXSIsIkFkZGl0aW9uYWxVc2VDYXNlcyI6IltdIiwiRW1haWwiOiJsYXphckBnbWFpbC5jb20iLCJuYmYiOjE2NTUwMzczNjAsImV4cCI6MTY1NTA0NDU2MCwiYXVkIjoiQW55In0.lqwcLjXbmtHzFuN5GPfoeQjR_FWpi42ZWAPMuS7LpXE",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "authorId",
+											"value": "4",
+											"type": "text"
+										},
+										{
+											"key": "categoryId",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "tagIds",
+											"value": "[2, 2]",
+											"contentType": "application/json",
+											"type": "text"
+										},
+										{
+											"key": "summary",
+											"value": "Boston wins Game 3",
+											"type": "text"
+										},
+										{
+											"key": "content",
+											"value": "Boston wins Game 3",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "Boston takes Game 3",
+											"type": "text"
+										},
+										{
+											"key": "metaTitle",
+											"value": "Boston wins Game 3",
+											"type": "text"
+										},
+										{
+											"key": "metaDescription",
+											"value": "Boston wins Game 3",
+											"type": "text"
+										},
+										{
+											"key": "slug",
+											"value": "nba-win-boston",
+											"type": "text"
+										},
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/C:/Users/Kibonga/Desktop/Misc/Images/iq-score.jpg"
+										},
+										{
+											"key": "files",
+											"type": "file",
+											"src": [
+												"/C:/Users/Kibonga/Desktop/Misc/Images/Kolega.jpg",
+												"/C:/Users/Kibonga/Desktop/Misc/Images/Siziphus.jpg",
+												"/C:/Users/Kibonga/Desktop/Misc/Images/triangle-ufc-majica.jpg"
+											]
+										},
+										{
+											"key": "id",
+											"value": "2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/posts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"posts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Deactivate Post",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/posts/deactivate/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"posts",
+										"deactivate",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Activate Post",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/posts/activate/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"posts",
+										"activate",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Post",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/posts/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"posts",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Posts",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI3YzQ2MWUwNi0yMjMxLTRlMzQtOTQxNy1mYTk1NmNhZGM5YjYiLCJpc3MiOiJLaWJvbmdhSGltYm8iLCJpYXQiOjE2NTQ5Nzg3MTEsIlVzZXJJZCI6IjIiLCJBbGxvd2VkVXNlQ2FzZXMiOiJbMSw1LDYsMTMsMTQsMTYsMTcsMTgsMjEsMjIsMjMsMjQsMjUsMjgsMjksMzAsMzEsMzIsMzMsMzRdIiwiRm9yYmlkZGVuVXNlQ2FzZXMiOiJbXSIsIkFkZGl0aW9uYWxVc2VDYXNlcyI6IltdIiwiRW1haWwiOiJraWJvbmdhQGdtYWlsLmNvbSIsIm5iZiI6MTY1NDk3ODcxMSwiZXhwIjoxNjU0OTg1OTExLCJhdWQiOiJBbnkifQ.Bb22eZpT0mbmLU5Il_vDwIYCtu6-vXiuuYJKfL8CtGg",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/posts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"posts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find Post",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJiZDBjNTVjMy03Y2FlLTQyNGUtYTNmNS0yMTQ0OTE0YTEyOWYiLCJpc3MiOiJLaWJvbmdhSGltYm8iLCJpYXQiOjE2NTQ5NzcwNTEsIlVzZXJJZCI6IjIiLCJBbGxvd2VkVXNlQ2FzZXMiOiJbMSw1LDYsMTMsMTQsMTYsMTcsMTgsMjEsMjIsMjMsMjQsMjUsMjgsMjksMzAsMzEsMzIsMzMsMzRdIiwiRm9yYmlkZGVuVXNlQ2FzZXMiOiJbMjFdIiwiQWRkaXRpb25hbFVzZUNhc2VzIjoiW10iLCJFbWFpbCI6ImtpYm9uZ2FAZ21haWwuY29tIiwibmJmIjoxNjU0OTc3MDUxLCJleHAiOjE2NTQ5ODQyNTEsImF1ZCI6IkFueSJ9.awWHYhnZNV3c_y_l2-VGOo6VvZsiZs1ZLBbnt9U6x7k",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/posts/5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"posts",
+										"5"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Comment",
+					"item": [
+						{
+							"name": "Create Comment",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userId\": 2,\r\n    \"postId\": 1,\r\n    \"content\": \"Splash Bros are the real deal, hands down!\",\r\n    \"parentId\":2\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/comments",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"comments"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Comment",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 2,\r\n    \"content\": \"Updating comment, third take\"\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/comments",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"comments"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Deactivate Comment",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/comments/deactivate/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"comments",
+										"deactivate",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Activate Comment",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/comments/activate/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"comments",
+										"activate",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Comments from Post",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://localhost:5000/api/comments/posts/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"comments",
+										"posts",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Like",
+					"item": [
+						{
+							"name": "Create Post Like",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"LikedPostsId\": 1,\r\n    \"UsersWhoLikedId\": 1\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/likes/posts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"likes",
+										"posts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Post Like",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/likes/posts/1/user/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"likes",
+										"posts",
+										"1",
+										"user",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Comment Like",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"LikedCommentsId\": 1,\r\n    \"UsersWhoLikedId\": 3\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/likes/comments",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"likes",
+										"comments"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Comment Like",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/likes/comments/1/user/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"likes",
+										"comments",
+										"1",
+										"user",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Rating",
+					"item": [
+						{
+							"name": "Create Rating",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userId\": 2,\r\n    \"postId\": 1,\r\n    \"numberOfStars\": 4\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/ratings",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"ratings"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Rating",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userId\": 2,\r\n    \"postId\": 1,\r\n    \"numberOfStars\": 4\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/ratings",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"ratings"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Group",
+					"item": [
+						{
+							"name": "Create Group",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Regular User\"\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/groups",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"groups"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Group UseCases",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJjMGE4N2JlMS0wYjU2LTQzNDMtYjIyOS0zNTRlYmYzN2Y4M2EiLCJpc3MiOiJLaWJvbmdhSGltYm8iLCJpYXQiOjE2NTQ5NzA0NDksIlVzZXJJZCI6IjEiLCJBbGxvd2VkVXNlQ2FzZXMiOiJbMSwyLDMsNCw1LDYsNyw4LDksMTAsMTEsMTIsMTMsMTQsMTUsMTYsMTcsMTgsMTksMjAsMjEsMjIsMjMsMjQsMjUsMjYsMjcsMjgsMjksMzAsMzEsMzIsMzMsMzQsMzUsMzYsMzcsMzgsMzksNDAsNDEsNDIsNDNdIiwiRm9yYmlkZGVuVXNlQ2FzZXMiOiJbXSIsIkFkZGl0aW9uYWxVc2VDYXNlcyI6IltdIiwiRW1haWwiOiJsYXphckBnbWFpbC5jb20iLCJuYmYiOjE2NTQ5NzA0NDksImV4cCI6MTY1NDk3NzY0OSwiYXVkIjoiQW55In0.mUqNZEbXn9GTq_LH6ACHtQq0_5vYa4MxVPoSsFkbj1w",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1, \r\n    \"useCasesIds\" : [21]\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/groups/usecases/add",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"groups",
+										"usecases",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Remove Group UseCases",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI0ZmRhYjM0ZS04N2U1LTQ2MTEtYjBlZi05NTc0MjdjMGFiMjEiLCJpc3MiOiJLaWJvbmdhSGltYm8iLCJpYXQiOjE2NTQ5NzAyMzIsIlVzZXJJZCI6IjEiLCJBbGxvd2VkVXNlQ2FzZXMiOiJbMSwyLDMsNCw1LDYsNyw4LDksMTAsMTEsMTIsMTMsMTQsMTUsMTYsMTcsMTgsMTksMjAsMjEsMjIsMjMsMjQsMjUsMjYsMjcsMjgsMjksMzAsMzEsMzIsMzMsMzQsMzUsMzYsMzcsMzgsMzksNDAsNDEsNDIsNDNdIiwiRm9yYmlkZGVuVXNlQ2FzZXMiOiJbXSIsIkFkZGl0aW9uYWxVc2VDYXNlcyI6IltdIiwiRW1haWwiOiJsYXphckBnbWFpbC5jb20iLCJuYmYiOjE2NTQ5NzAyMzIsImV4cCI6MTY1NDk3NzQzMiwiYXVkIjoiQW55In0.QXHpGudGSD-T2KuxbFYyqcUjNolUzqh-91ke7SGLMts",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1, \r\n    \"useCasesIds\" : [21]\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/groups/usecases/remove",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"groups",
+										"usecases",
+										"remove"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Deactivate Group",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/groups/deactivate/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"groups",
+										"deactivate",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Activate Group",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/groups/activate/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"groups",
+										"activate",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Groups",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/groups",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"groups"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find Group",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/groups/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"groups",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Users for Group",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "Change Group for User",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJiYWExNjhkMC1iOGQ0LTQ4MWItYjc2ZS03ZjYwYzliYTgwNjciLCJpc3MiOiJLaWJvbmdhSGltYm8iLCJpYXQiOjE2NTUwMTQ3OTQsIlVzZXJJZCI6IjEiLCJBbGxvd2VkVXNlQ2FzZXMiOiJbMSwyLDMsNCw1LDYsNyw4LDksMTAsMTEsMTIsMTMsMTQsMTUsMTYsMTcsMTgsMTksMjAsMjEsMjIsMjMsMjQsMjUsMjYsMjcsMjgsMjksMzAsMzEsMzIsMzMsMzQsMzUsMzYsMzcsMzgsMzksNDAsNDEsNDIsNDMsNDQsNDUsNDYsNDcsNDgsNDksNTBdIiwiRm9yYmlkZGVuVXNlQ2FzZXMiOiJbXSIsIkFkZGl0aW9uYWxVc2VDYXNlcyI6IltdIiwiRW1haWwiOiJsYXphckBnbWFpbC5jb20iLCJuYmYiOjE2NTUwMTQ3OTQsImV4cCI6MTY1NTAyMTk5NCwiYXVkIjoiQW55In0.K3xPXnfjXxmX7rDEDdNk3hUYICMSyFrP9wx8ByRa8Nw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userId\": 2,\r\n    \"groupId\": 3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/groups/change",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"groups",
+										"change"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "UseCase",
+					"item": [
+						{
+							"name": "Create UseCase",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIzODBhNzczNi1mNjlmLTRhMWQtYjQxOC05N2Y1MDc1MmY0YmUiLCJpc3MiOiJLaWJvbmdhSGltYm8iLCJpYXQiOjE2NTQ5ODc0NTEsIlVzZXJJZCI6IjEiLCJBbGxvd2VkVXNlQ2FzZXMiOiJbMSwyLDMsNCw1LDYsNyw4LDksMTAsMTEsMTIsMTMsMTQsMTUsMTYsMTcsMTgsMTksMjAsMjEsMjIsMjMsMjQsMjUsMjYsMjcsMjgsMjksMzAsMzEsMzIsMzMsMzQsMzUsMzYsMzcsMzgsMzksNDAsNDEsNDIsNDMsNDQsNDUsNDYsNDcsNDhdIiwiRm9yYmlkZGVuVXNlQ2FzZXMiOiJbXSIsIkFkZGl0aW9uYWxVc2VDYXNlcyI6IltdIiwiRW1haWwiOiJsYXphckBnbWFpbC5jb20iLCJuYmYiOjE2NTQ5ODc0NTEsImV4cCI6MTY1NDk5NDY1MSwiYXVkIjoiQW55In0.dCpwTHzAaIRf5yVxE2i7Q1VF3wMflFTCspCdhyKj5eg",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Query all Forbidden UseCases for User (EF)\",\r\n    \"description\": \"Use case for querying all forbidden UseCases for single User using EF\"\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/usecases",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"usecases"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Group UsesCases",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIwMjQ4MzU2Yi00Mjg0LTRjMDgtODBjZS0zMzEyOWEyY2QyNzMiLCJpc3MiOiJLaWJvbmdhSGltYm8iLCJpYXQiOjE2NTQ5Nzk5OTEsIlVzZXJJZCI6IjEiLCJBbGxvd2VkVXNlQ2FzZXMiOiJbMSwyLDMsNCw1LDYsNyw4LDksMTAsMTEsMTIsMTMsMTQsMTUsMTYsMTcsMTgsMTksMjAsMjEsMjIsMjMsMjQsMjUsMjYsMjcsMjgsMjksMzAsMzEsMzIsMzMsMzQsMzUsMzYsMzcsMzgsMzksNDAsNDEsNDIsNDMsNDQsNDVdIiwiRm9yYmlkZGVuVXNlQ2FzZXMiOiJbXSIsIkFkZGl0aW9uYWxVc2VDYXNlcyI6IltdIiwiRW1haWwiOiJsYXphckBnbWFpbC5jb20iLCJuYmYiOjE2NTQ5Nzk5OTEsImV4cCI6MTY1NDk4NzE5MSwiYXVkIjoiQW55In0.QWtxOVqb9IEsi2Tgs-0gjZ5UfAtTVcyDVo5569SerR4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/usecases/groups/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"usecases",
+										"groups",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Forbidden UseCase For User",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIxODJiMWY4OC1jMTVhLTQyNjItOWE0OC0zZGI5NjQ5NGEzMmQiLCJpc3MiOiJLaWJvbmdhSGltYm8iLCJpYXQiOjE2NTQ5ODc2MDksIlVzZXJJZCI6IjEiLCJBbGxvd2VkVXNlQ2FzZXMiOiJbMSwyLDMsNCw1LDYsNyw4LDksMTAsMTEsMTIsMTMsMTQsMTUsMTYsMTcsMTgsMTksMjAsMjEsMjIsMjMsMjQsMjUsMjYsMjcsMjgsMjksMzAsMzEsMzIsMzMsMzQsMzUsMzYsMzcsMzgsMzksNDAsNDEsNDIsNDMsNDQsNDUsNDYsNDcsNDgsNDldIiwiRm9yYmlkZGVuVXNlQ2FzZXMiOiJbXSIsIkFkZGl0aW9uYWxVc2VDYXNlcyI6IltdIiwiRW1haWwiOiJsYXphckBnbWFpbC5jb20iLCJuYmYiOjE2NTQ5ODc2MDksImV4cCI6MTY1NDk5NDgwOSwiYXVkIjoiQW55In0.x5qKfRYQlDYCAe5Lwn8Pwez_Q6p-g4WScEmbCUqGMSY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userId\": 2,\r\n    \"useCaseIds\": [2]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/usecases/add/forbidden",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"usecases",
+										"add",
+										"forbidden"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Remove Forbidden UseCase For User",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIxODJiMWY4OC1jMTVhLTQyNjItOWE0OC0zZGI5NjQ5NGEzMmQiLCJpc3MiOiJLaWJvbmdhSGltYm8iLCJpYXQiOjE2NTQ5ODc2MDksIlVzZXJJZCI6IjEiLCJBbGxvd2VkVXNlQ2FzZXMiOiJbMSwyLDMsNCw1LDYsNyw4LDksMTAsMTEsMTIsMTMsMTQsMTUsMTYsMTcsMTgsMTksMjAsMjEsMjIsMjMsMjQsMjUsMjYsMjcsMjgsMjksMzAsMzEsMzIsMzMsMzQsMzUsMzYsMzcsMzgsMzksNDAsNDEsNDIsNDMsNDQsNDUsNDYsNDcsNDgsNDldIiwiRm9yYmlkZGVuVXNlQ2FzZXMiOiJbXSIsIkFkZGl0aW9uYWxVc2VDYXNlcyI6IltdIiwiRW1haWwiOiJsYXphckBnbWFpbC5jb20iLCJuYmYiOjE2NTQ5ODc2MDksImV4cCI6MTY1NDk5NDgwOSwiYXVkIjoiQW55In0.x5qKfRYQlDYCAe5Lwn8Pwez_Q6p-g4WScEmbCUqGMSY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userId\": 2,\r\n    \"useCaseIds\": [2]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/usecases/remove/forbidden",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"usecases",
+										"remove",
+										"forbidden"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Additional UseCase for User",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI2YWU5YTZjYi1hZjQ5LTRkMDgtOTExOC04ODlkNzVlMjUwM2IiLCJpc3MiOiJLaWJvbmdhSGltYm8iLCJpYXQiOjE2NTQ5ODAyNjEsIlVzZXJJZCI6IjEiLCJBbGxvd2VkVXNlQ2FzZXMiOiJbMSwyLDMsNCw1LDYsNyw4LDksMTAsMTEsMTIsMTMsMTQsMTUsMTYsMTcsMTgsMTksMjAsMjEsMjIsMjMsMjQsMjUsMjYsMjcsMjgsMjksMzAsMzEsMzIsMzMsMzQsMzUsMzYsMzcsMzgsMzksNDAsNDEsNDIsNDMsNDQsNDUsNDZdIiwiRm9yYmlkZGVuVXNlQ2FzZXMiOiJbXSIsIkFkZGl0aW9uYWxVc2VDYXNlcyI6IltdIiwiRW1haWwiOiJsYXphckBnbWFpbC5jb20iLCJuYmYiOjE2NTQ5ODAyNjEsImV4cCI6MTY1NDk4NzQ2MSwiYXVkIjoiQW55In0.H192uM_IaJ0oZUgh8ETqqlDNmnbML6TwAa1HdVlwUxU",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userId\": 2,\r\n    \"useCaseIds\": [2]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/usecases/add/additional",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"usecases",
+										"add",
+										"additional"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Remove Additional UseCase for User",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJkNWYwNWFkZi02ODBjLTQ1ODctOGM3My1lMzljMDViNjk2YjEiLCJpc3MiOiJLaWJvbmdhSGltYm8iLCJpYXQiOjE2NTQ5ODEyODUsIlVzZXJJZCI6IjEiLCJBbGxvd2VkVXNlQ2FzZXMiOiJbMSwyLDMsNCw1LDYsNyw4LDksMTAsMTEsMTIsMTMsMTQsMTUsMTYsMTcsMTgsMTksMjAsMjEsMjIsMjMsMjQsMjUsMjYsMjcsMjgsMjksMzAsMzEsMzIsMzMsMzQsMzUsMzYsMzcsMzgsMzksNDAsNDEsNDIsNDMsNDQsNDUsNDYsNDddIiwiRm9yYmlkZGVuVXNlQ2FzZXMiOiJbXSIsIkFkZGl0aW9uYWxVc2VDYXNlcyI6IltdIiwiRW1haWwiOiJsYXphckBnbWFpbC5jb20iLCJuYmYiOjE2NTQ5ODEyODUsImV4cCI6MTY1NDk4ODQ4NSwiYXVkIjoiQW55In0.QNM5U_TAtk1R-hRcO1XLbrqvMGGz2ZgLoFnvjEOcARk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userId\": 2,\r\n    \"useCaseIds\": [2]\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/usecases/remove/additional",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"usecases",
+										"remove",
+										"additional"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Additional UseCases for User",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIxNDA1OTQ3Mi00NTM0LTQyM2UtOGFiNi02M2I5NGVjZjhlZGIiLCJpc3MiOiJLaWJvbmdhSGltYm8iLCJpYXQiOjE2NTQ5ODcwMzIsIlVzZXJJZCI6IjEiLCJBbGxvd2VkVXNlQ2FzZXMiOiJbMSwyLDMsNCw1LDYsNyw4LDksMTAsMTEsMTIsMTMsMTQsMTUsMTYsMTcsMTgsMTksMjAsMjEsMjIsMjMsMjQsMjUsMjYsMjcsMjgsMjksMzAsMzEsMzIsMzMsMzQsMzUsMzYsMzcsMzgsMzksNDAsNDEsNDIsNDMsNDQsNDUsNDYsNDcsNDhdIiwiRm9yYmlkZGVuVXNlQ2FzZXMiOiJbXSIsIkFkZGl0aW9uYWxVc2VDYXNlcyI6IltdIiwiRW1haWwiOiJsYXphckBnbWFpbC5jb20iLCJuYmYiOjE2NTQ5ODcwMzIsImV4cCI6MTY1NDk5NDIzMiwiYXVkIjoiQW55In0.tX8VahE0Jf39ONJXDnJZVDksM6N3E2o-655C8gDulCE",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/usecases/additional/users/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"usecases",
+										"additional",
+										"users",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Forbidden UseCases for User",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIxODJiMWY4OC1jMTVhLTQyNjItOWE0OC0zZGI5NjQ5NGEzMmQiLCJpc3MiOiJLaWJvbmdhSGltYm8iLCJpYXQiOjE2NTQ5ODc2MDksIlVzZXJJZCI6IjEiLCJBbGxvd2VkVXNlQ2FzZXMiOiJbMSwyLDMsNCw1LDYsNyw4LDksMTAsMTEsMTIsMTMsMTQsMTUsMTYsMTcsMTgsMTksMjAsMjEsMjIsMjMsMjQsMjUsMjYsMjcsMjgsMjksMzAsMzEsMzIsMzMsMzQsMzUsMzYsMzcsMzgsMzksNDAsNDEsNDIsNDMsNDQsNDUsNDYsNDcsNDgsNDldIiwiRm9yYmlkZGVuVXNlQ2FzZXMiOiJbXSIsIkFkZGl0aW9uYWxVc2VDYXNlcyI6IltdIiwiRW1haWwiOiJsYXphckBnbWFpbC5jb20iLCJuYmYiOjE2NTQ5ODc2MDksImV4cCI6MTY1NDk5NDgwOSwiYXVkIjoiQW55In0.x5qKfRYQlDYCAe5Lwn8Pwez_Q6p-g4WScEmbCUqGMSY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/usecases/forbidden/users/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"usecases",
+										"forbidden",
+										"users",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All UseCase Logs",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Init Data",
+					"item": [
+						{
+							"name": "Init UseCases and Groups",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/initData",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"initData"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
